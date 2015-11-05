@@ -1,0 +1,8 @@
+<h1><%= @post.title %> </h1>
+<div>
+    <%= @post.body %>
+</div>
+<%= image_tag @post.image.url(:medium) %>
+<%= link_to "edit", edit_post_path(@post) %>
+<%= link_to "delete", post_path(@post), method:  :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "See the Posts", posts_path(@post) %>
